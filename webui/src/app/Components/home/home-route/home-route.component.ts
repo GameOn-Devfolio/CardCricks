@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-route.component.scss']
 })
 export class HomeRouteComponent implements OnInit {
-  constructor(private webSocketService: WebSocketService) {}
+  constructor(public webSocketService: WebSocketService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.webSocketService.sendMessage('hi');
+  }
 }

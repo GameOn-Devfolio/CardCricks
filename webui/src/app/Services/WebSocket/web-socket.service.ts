@@ -8,6 +8,9 @@ export class WebSocketService {
 
   constructor() {
     // this.socket = io.connect('http://localhost:8000');
-    this.socket = io.connect();
+    this.socket = io.connect('http://localhost:3010');
+  }
+  sendMessage(msg: string) {
+    this.socket.emit('sendMessage', { message: msg });
   }
 }
