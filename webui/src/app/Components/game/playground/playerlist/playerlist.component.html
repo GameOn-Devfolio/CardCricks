@@ -6,11 +6,23 @@
   fxLayoutAlign="space-around start"
   fxFlexFill
 >
-  <div *ngFor="let player of players; index as i" fxFlex="63">
+  <div class="player" *ngFor="let player of players; index as i" fxFlex="63">
     <div fxLayout="column" fxLayoutGap="20px grid">
       <span></span>
       <div>
         <mat-card>
+          <swal
+            #loginSuccess
+            type="success"
+            title="Signed in successfully"
+            [swalOptions]="{
+              toast: true,
+              position: 'bottom-end',
+              showConfirmButton: false,
+              timer: 3000,
+              background: '#000'
+            }"
+          ></swal>
           <mat-card-header>
             <mat-card-title>{{ i + 1 }}: {{ player.address }}</mat-card-title>
           </mat-card-header>
@@ -31,3 +43,5 @@
     </div>
   </div>
 </div>
+<br />
+<app-play-card></app-play-card>

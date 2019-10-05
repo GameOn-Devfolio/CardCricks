@@ -1,0 +1,42 @@
+<div class="card">
+  <mat-card *ngFor="let card of Cards" class="example-card">
+    <mat-card-header> </mat-card-header>
+    <img
+      mat-card-image
+      src="http://wearecodex.com/steem-avatars/avatar-minnow.php?seed={{
+        card.totalMatches
+      }}"
+      alt="Fish"
+    />
+    <mat-card-content>
+      <div class="properties">
+        <mat-grid-list cols="1" rowHeight="30px">
+          <mat-grid-tile>
+            <p>Total Matches : {{ card.totalMatches }}</p>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <p>Total Catches : {{ card.totalCatches }}</p>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <p>Total Runs : {{ card.totalRuns }}</p>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <p>Strike Rate : {{ card.strikeRate }}</p>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <p>Total Centuries : {{ card.totalCenturies }}</p>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <p>Total Wickets : {{ card.totalWickets }}</p>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <p>Total Overs : {{ card.totalOvers }}</p>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <p>Total Four Wickets : {{ card.totalFourWickets }}</p>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

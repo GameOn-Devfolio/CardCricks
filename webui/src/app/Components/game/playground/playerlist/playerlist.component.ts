@@ -13,9 +13,9 @@ export interface Section {
 export class PlayerlistComponent implements OnInit {
   @ViewChild("AlertError", { static: false })
   private AlertError: SwalComponent;
-  @ViewChild("AlertSuccess", { static: false })
-  private AlertSuccess: SwalComponent;
-  Enemies: Array<string>;
+  @ViewChild("AlertWaiting", { static: false })
+  private AlertWaiting: SwalComponent;
+  // Enemies: Array<string>;
   // VillageSub: Subscription;
   isFirst = true;
   constructor() {}
@@ -36,6 +36,7 @@ export class PlayerlistComponent implements OnInit {
     }
   ];
   Challenge(address) {
+    this.AlertWaiting.fire();
     alert(address);
   }
 }
