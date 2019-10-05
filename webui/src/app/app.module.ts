@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './Modules/material/material.module';
 import { GameComponent } from './Components/game/game.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -20,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { PlaygroundComponent } from './Components/game/playground/playground.component';
 import { PlayerlistComponent } from './Components/game/playground/playerlist/playerlist.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,6 @@ import { PlayerlistComponent } from './Components/game/playground/playerlist/pla
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     MaterialModule,
     LayoutModule,
     MatToolbarModule,
@@ -43,7 +42,8 @@ import { PlayerlistComponent } from './Components/game/playground/playerlist/pla
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    SweetAlert2Module.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
