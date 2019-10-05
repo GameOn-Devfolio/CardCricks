@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 export interface Section {
-  name: string;
+  address: string;
   updated: Date;
 }
 @Component({
@@ -13,28 +13,21 @@ export class PlayerlistComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-  folders: Section[] = [
+  players: Section[] = [
     {
-      name: "Photos",
+      address: "address1",
       updated: new Date("1/1/16")
     },
     {
-      name: "Recipes",
+      address: "address2",
       updated: new Date("1/17/16")
     },
     {
-      name: "Work",
+      address: "address3",
       updated: new Date("1/28/16")
     }
   ];
-  notes: Section[] = [
-    {
-      name: "Vacation Itinerary",
-      updated: new Date("2/20/16")
-    },
-    {
-      name: "Kitchen Remodel",
-      updated: new Date("1/18/16")
-    }
-  ];
+  challenge(address) {
+    alert(address);
+  }
 }
