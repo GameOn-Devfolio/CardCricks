@@ -15,6 +15,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { PlaygroundComponent } from "./Components/game/playground/playground.component";
 import { PlayerlistComponent } from "./Components/game/playground/playerlist/playerlist.component";
 import { SweetAlert2Module } from "@sweetalert2/ngx-sweetalert2";
+import { PlayCardComponent } from './Components/game/playground/play-card/play-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SweetAlert2Module } from "@sweetalert2/ngx-sweetalert2";
     HomeRouteComponent,
     AboutComponent,
     PlaygroundComponent,
-    PlayerlistComponent
+    PlayerlistComponent,
+    PlayCardComponent
   ],
   imports: [
     BrowserModule,
