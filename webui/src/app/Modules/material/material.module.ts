@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from "@angular/core";
 import {
   MatToolbarModule,
   MatButtonModule,
@@ -14,16 +14,19 @@ import {
   MatDialogModule,
   MatProgressSpinnerModule,
   MatTableModule
-} from '@angular/material';
-import { MatPaginatorModule } from '@angular/material/paginator';
+} from "@angular/material";
+import { LayoutModule } from "@angular/cdk/layout";
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTabsModule } from '@angular/material/tabs';
+import { MatPaginatorModule } from "@angular/material/paginator";
+
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatTabsModule } from "@angular/material/tabs";
 
 @NgModule({
   imports: [
     MatPaginatorModule,
     MatTableModule,
+    LayoutModule,
     MatProgressSpinnerModule,
     MatDialogModule,
     MatGridListModule,
@@ -60,4 +63,4 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatTabsModule
   ]
 })
-export class MaterialModule { }
+export class MaterialModule {}
