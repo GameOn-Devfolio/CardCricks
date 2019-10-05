@@ -11,7 +11,7 @@ let VillageJSON;
 declare let window: any;
 declare let ethereum: any;
 declare let web3: any;
-const BaseUrl = 'http://' + window.location.hostname + ':3010/contracts/';
+//const BaseUrl = 'http://' + window.location.hostname + ':3010/contracts/';
 
 //anugalr service to loggin with metamask
 
