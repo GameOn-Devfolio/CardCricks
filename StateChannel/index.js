@@ -6,16 +6,26 @@ let server = http.Server(app);
 
 let socketIO = require('socket.io');
 let io = socketIO(server);
-
+let players = [];
 io.on('connection', socket => {
-  console.log('user connected');
   socket.on('UserOnline', address => {
-    socket.join('Players');
-    socket.broadcast.to('User is Online', address);
+    //console.log('Online ', address);
+    socket.join('Game');
+    //socket.emit('User is Online', address);
+    if (players.indexOf(address) === -1) {
+      players.push(address);
+    }
+    io.to('Game').emit('Players', players);
   });
   socket.on('UserOffline', address => {
-    socket.broadcast.to('User is Offline', address);
-    socket.leave('Players');
+    //console.log('Offline ', address);
+    //socket.to('Players').emit('User is Offline', address);
+    socket.leave('Game');
+    const index = players.indexOf(address);
+    if (index !== -1) {
+      players.splice(index, 1);
+      io.to('Game').emit('Players', players);
+    }
   });
 });
 
