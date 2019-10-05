@@ -1,3 +1,4 @@
+import { WebSocketService } from './../../../Services/WebSocket/web-socket.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-route.component.scss']
 })
 export class HomeRouteComponent implements OnInit {
+  constructor(private webSocketService: WebSocketService) {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

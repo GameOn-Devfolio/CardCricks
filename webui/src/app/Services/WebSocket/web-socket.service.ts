@@ -4,7 +4,10 @@ import * as io from 'socket.io-client';
   providedIn: 'root'
 })
 export class WebSocketService {
-  private socket = io('http://localhost:3010');
+  socket: SocketIOClient.Socket;
 
-  constructor() {}
+  constructor() {
+    // this.socket = io.connect('http://localhost:8000');
+    this.socket = io.connect();
+  }
 }
