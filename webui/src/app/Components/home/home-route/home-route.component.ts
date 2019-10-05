@@ -22,6 +22,10 @@ export class HomeRouteComponent implements OnInit {
 
   ngOnInit() {
     this.webSocketService.sendMessage('hi');
+    const isLogged = localStorage.getItem('isLogged');
+    if (isLogged === 'true') {
+      this.route.navigateByUrl('/Game');
+    }
   }
   login = async () => {
     this.web3Service
