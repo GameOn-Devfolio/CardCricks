@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { AddCardComponent } from './Components/admin/add-card/add-card.component';
 import { EditCardComponent } from './Components/admin/edit-card/edit-card.component';
 import { DeleteCardComponent } from './Components/admin/delete-card/delete-card.component';
+import { AdminrouterComponent } from './Components/admin/adminrouter/adminrouter.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { DeleteCardComponent } from './Components/admin/delete-card/delete-card.
     SelectCardsComponent,
     AddCardComponent,
     EditCardComponent,
-    DeleteCardComponent
+    DeleteCardComponent,
+    AdminrouterComponent
   ],
   imports: [
     BrowserModule,
