@@ -1,4 +1,5 @@
 export interface PlayCard {
+  cardID: number;
   totalMatches: number;
   totalCatches: number;
   totalRuns: number;

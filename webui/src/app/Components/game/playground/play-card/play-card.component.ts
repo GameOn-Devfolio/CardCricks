@@ -12,6 +12,7 @@ export class PlayCardComponent implements OnInit {
   ngOnInit() {}
   Cards: PlayCard[] = [
     {
+      cardID: 1,
       totalMatches: 1,
       totalCatches: 1,
       totalRuns: 1,
@@ -22,6 +23,7 @@ export class PlayCardComponent implements OnInit {
       totalFourWickets: 1
     },
     {
+      cardID: 2,
       totalMatches: 2,
       totalCatches: 2,
       totalRuns: 2,
@@ -32,6 +34,7 @@ export class PlayCardComponent implements OnInit {
       totalFourWickets: 2
     },
     {
+      cardID: 3,
       totalMatches: 3,
       totalCatches: 3,
       totalRuns: 3,

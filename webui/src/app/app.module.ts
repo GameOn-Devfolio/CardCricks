@@ -15,7 +15,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { PlaygroundComponent } from "./Components/game/playground/playground.component";
 import { PlayerlistComponent } from "./Components/game/playground/playerlist/playerlist.component";
 import { SweetAlert2Module } from "@sweetalert2/ngx-sweetalert2";
-import { PlayCardComponent } from './Components/game/playground/play-card/play-card.component';
+import { PlayCardComponent } from "./Components/game/playground/play-card/play-card.component";
+import { SelectCardsComponent } from "./Components/game/playground/select-cards/select-cards.component";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -27,13 +29,15 @@ import { PlayCardComponent } from './Components/game/playground/play-card/play-c
     AboutComponent,
     PlaygroundComponent,
     PlayerlistComponent,
-    PlayCardComponent
+    PlayCardComponent,
+    SelectCardsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
     HttpClientModule,
+    ReactiveFormsModule,
     SweetAlert2Module.forRoot()
   ],
   providers: [],
