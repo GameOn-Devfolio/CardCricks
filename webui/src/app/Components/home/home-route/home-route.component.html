@@ -1,3 +1,16 @@
 <div class="start">
+  <swal
+    #loginSuccess
+    type="success"
+    title="Signed in successfully"
+    [swalOptions]="{
+      toast: true,
+      position: 'bottom-end',
+      showConfirmButton: false,
+      timer: 3000,
+      background: '#000'
+    }"
+  ></swal>
+  <swal #loginError title="Oops..." text="" type="error"> </swal>
   <button (click)="login()" mat-flat-button color="primary">Start Game</button>
 </div>
