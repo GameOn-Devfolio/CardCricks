@@ -1,0 +1,63 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <label
+    formArrayName="orders"
+    *ngFor="let order of form.controls.orders.controls; let i = index"
+  >
+    <div class="card">
+      <mat-card class="example-card">
+        <mat-card-header> </mat-card-header>
+        <img
+          mat-card-image
+          src="http://wearecodex.com/steem-avatars/avatar-minnow.php?seed={{
+            Cards[i].totalMatches
+          }}"
+          alt="{{ Cards[i].totalMatches }}"
+        />
+        <mat-card-content>
+          <div class="properties">
+            <mat-grid-list cols="1" rowHeight="30px">
+              <mat-grid-tile>
+                <p>Total Matches : {{ Cards[i].totalMatches }}</p>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <p>Total Catches : {{ Cards[i].totalCatches }}</p>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <p>Total Runs : {{ Cards[i].totalRuns }}</p>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <p>Strike Rate : {{ Cards[i].strikeRate }}</p>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <p>Total Centuries : {{ Cards[i].totalCenturies }}</p>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <p>Total Wickets : {{ Cards[i].totalWickets }}</p>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <p>Total Overs : {{ Cards[i].totalOvers }}</p>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <p>Total Four Wickets : {{ Cards[i].totalFourWickets }}</p>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <p>Select : <input type="checkbox" [formControlName]="i" /></p>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </label>
+
+  <div *ngIf="!form.valid">At least 3 order must be selected</div>
+  <br />
+  <button
+    mat-raised-button
+    color="warn"
+    style="background-color: #1fa22e"
+    [disabled]="!form.valid"
+  >
+    submit
+  </button>
+</form>
