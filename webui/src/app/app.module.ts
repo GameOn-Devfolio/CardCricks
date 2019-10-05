@@ -16,9 +16,11 @@ import { MainNavComponent } from './Components/other/main-nav/main-nav.component
 import { HomeComponent } from './Components/home/home.component';
 import { HomeRouteComponent } from './Components/home/home-route/home-route.component';
 import { AboutComponent } from './Components/home/about/about.component';
+import { PlaygroundComponent } from './Components/game/playground/playground.component';
+import { PlayerlistComponent } from './Components/game/playground/playerlist/playerlist.component';
 
 @NgModule({
-  declarations: [AppComponent, GameComponent, MainNavComponent, HomeComponent, HomeRouteComponent, AboutComponent],
+  declarations: [AppComponent, GameComponent, MainNavComponent, HomeComponent, HomeRouteComponent, AboutComponent, PlaygroundComponent, PlayerlistComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
