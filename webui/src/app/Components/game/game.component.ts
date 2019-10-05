@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Web3Model } from "src/app/Models/web3.model";
 
 @Component({
   selector: "app-game",
