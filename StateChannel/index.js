@@ -9,6 +9,14 @@ let io = socketIO(server);
 
 io.on('connection', socket => {
   console.log('user connected');
+  socket.on('UserOnline', address => {
+    socket.join('Players');
+    socket.broadcast.to('User is Online', address);
+  });
+  socket.on('UserOffline', address => {
+    socket.broadcast.to('User is Offline', address);
+    socket.leave('Players');
+  });
 });
 
 server.listen(3010, () => {
