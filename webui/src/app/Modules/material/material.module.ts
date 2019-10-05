@@ -16,7 +16,7 @@ import {
   MatTableModule
 } from "@angular/material";
 import { LayoutModule } from "@angular/cdk/layout";
-
+import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatPaginatorModule } from "@angular/material/paginator";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -34,6 +34,7 @@ import { MatTabsModule } from "@angular/material/tabs";
     MatAutocompleteModule,
     MatChipsModule,
     MatInputModule,
+    FlexLayoutModule,
     MatSelectModule,
     MatToolbarModule,
     MatButtonModule,

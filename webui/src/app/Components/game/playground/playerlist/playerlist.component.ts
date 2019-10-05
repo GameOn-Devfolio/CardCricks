@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { SwalComponent } from "@sweetalert2/ngx-sweetalert2";
 
 export interface Section {
   address: string;
@@ -10,6 +11,13 @@ export interface Section {
   styleUrls: ["./playerlist.component.scss"]
 })
 export class PlayerlistComponent implements OnInit {
+  @ViewChild("AlertError", { static: false })
+  private AlertError: SwalComponent;
+  @ViewChild("AlertSuccess", { static: false })
+  private AlertSuccess: SwalComponent;
+  Enemies: Array<string>;
+  // VillageSub: Subscription;
+  isFirst = true;
   constructor() {}
 
   ngOnInit() {}
@@ -27,7 +35,7 @@ export class PlayerlistComponent implements OnInit {
       updated: new Date("1/28/16")
     }
   ];
-  challenge(address) {
+  Challenge(address) {
     alert(address);
   }
 }
