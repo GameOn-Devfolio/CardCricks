@@ -6,7 +6,8 @@
   fxLayoutAlign="space-around start"
   fxFlexFill
 >
-  <div class="player" *ngFor="let player of players; index as i" fxFlex="63">
+  <h2>Online Players</h2>
+  <div class="player" *ngFor="let player of PlayerList; index as i" fxFlex="63">
     <div fxLayout="column" fxLayoutGap="20px grid">
       <span></span>
       <div>
@@ -24,12 +25,12 @@
             }"
           ></swal>
           <mat-card-header>
-            <mat-card-title>{{ i + 1 }}: {{ player.address }}</mat-card-title>
+            <mat-card-title>{{ i + 1 }}: {{ player }}</mat-card-title>
           </mat-card-header>
           <mat-card-actions>
             <div fxLayout="row" fxLayoutAlign="space-between center">
               <button
-                (click)="Challenge(player.address)"
+                (click)="Challenge(player)"
                 mat-raised-button
                 color="warn"
                 style="background-color: #1fa22e"
@@ -44,4 +45,3 @@
   </div>
 </div>
 <br />
-<app-select-cards></app-select-cards>
