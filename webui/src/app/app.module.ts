@@ -18,6 +18,9 @@ import { HomeRouteComponent } from './Components/home/home-route/home-route.comp
 import { AboutComponent } from './Components/home/about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { PlaygroundComponent } from './Components/game/playground/playground.component';
+import { PlayerlistComponent } from './Components/game/playground/playerlist/playerlist.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
     MainNavComponent,
     HomeComponent,
     HomeRouteComponent,
-    AboutComponent
+    AboutComponent,
+    PlaygroundComponent,
+    PlayerlistComponent
   ],
   imports: [
     BrowserModule,
