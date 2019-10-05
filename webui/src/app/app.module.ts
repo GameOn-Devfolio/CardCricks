@@ -15,9 +15,10 @@ import { MatListModule } from "@angular/material/list";
 import { MainNavComponent } from './Components/other/main-nav/main-nav.component';
 import { HomeComponent } from './Components/home/home.component';
 import { HomeRouteComponent } from './Components/home/home-route/home-route.component';
+import { AboutComponent } from './Components/home/about/about.component';
 
 @NgModule({
-  declarations: [AppComponent, GameComponent, MainNavComponent, HomeComponent, HomeRouteComponent],
+  declarations: [AppComponent, GameComponent, MainNavComponent, HomeComponent, HomeRouteComponent, AboutComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
