@@ -22,13 +22,22 @@ import { MatPaginatorModule } from "@angular/material/paginator";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatTabsModule } from "@angular/material/tabs";
 
+import { MatCheckboxModule } from "@angular/material/checkbox";
+
+import { MatFormFieldModule } from "@angular/material/form-field";
+
+import { MatDividerModule } from "@angular/material/divider";
+
 @NgModule({
   imports: [
     MatPaginatorModule,
+    MatDividerModule,
     MatTableModule,
     LayoutModule,
+    MatFormFieldModule,
     MatProgressSpinnerModule,
     MatDialogModule,
+    MatCheckboxModule,
     MatGridListModule,
     MatCardModule,
     MatAutocompleteModule,
